@@ -1,0 +1,43 @@
+class Student 
+{
+    //attridutes,properties of an object
+    private String rollno;
+    private String name;
+    private String email;
+    private int age;
+    public void setData(String x,String y,String z,int a)
+    {
+        rollno =x;
+        name = y;
+        email = z;
+        age = a;
+        
+    }
+    //get method --> read values
+    public String getRollNo()
+    {
+        return rollno;
+    }
+    public String getName()
+    {
+        return name;
+    }
+     public String getEmail()
+    {
+        return email;
+    }
+      public int getAge()
+    {
+        return age;
+    }
+}
+class Main {
+    public static void main(String[] args) {
+    Student s = new Student();
+    s.setData("3201","sasi","kumar@gmail",30);
+    System.out.println("the student roll number :"+ s.getRollNo());
+    System.out.println("the student name :"+ s.getName());
+    System.out.println("the student Email :"+ s.getEmail());
+   System.out.println("the student age :"+ s.getAge());
+    }
+}
