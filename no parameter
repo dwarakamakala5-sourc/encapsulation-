@@ -1,0 +1,19 @@
+class Circle
+{
+    double pi=3.14;
+    double area(int r)
+    {
+        return pi*r*r;
+    }
+    double area(float r)
+    {
+        return pi*r*r;
+    }
+}
+class Main {
+    public static void main(String[] args) {
+    Circle c =new Circle();
+    System.out.println(c.area(10));
+    System.out.println(c.area(32.2f));
+    }
+}
