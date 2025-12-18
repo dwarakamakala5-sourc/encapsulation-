@@ -1,0 +1,58 @@
+abstract class Plane{
+    abstract void takeoff();
+    abstract void fly();
+    abstract void land();
+}
+class CargoPlane extends Plane{
+    void takeoff (){
+        System.out.println("CargoPlane is taking off");
+    }
+    void fly(){
+        System.out.println("Cargo plane is flying at low heights");
+    }
+    void land(){
+        System.out.println("CArgo  plane is landing");
+    }
+}
+class PassengerPlane extends Plane{
+     void takeoff (){
+        System.out.println(" passengerPlane is taking off");
+    }
+    void fly(){
+        System.out.println("passenger plane is flying at low heights");
+    }
+    void land(){
+        System.out.println("passengerplane is landing");
+    }
+}
+class FighterPLane extends Plane{
+     void takeoff (){
+        System.out.println("FighterPlane is taking off");
+    }
+    void fly(){
+        System.out.println("Fighter plane is flying at low heights");
+    }
+    void land(){
+        System.out.println("Fightplane is landing");
+    }
+}
+class Airport{
+    void permit(Plane ref){
+        ref.takeoff();
+        ref.fly();
+        ref.land();
+    }
+}
+
+public class  Plane12{
+    public static void main(String []  args){
+        CargoPlane cp = new CargoPlane();
+        PassengerPlane pp = new PassengerPlane();
+        FighterPLane fp = new FighterPLane();
+
+        Airport a = new Airport();
+        a.permit(cp);
+        a.permit(pp);
+        a.permit(fp);
+    }
+}
